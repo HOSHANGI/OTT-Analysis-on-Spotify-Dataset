@@ -2,37 +2,21 @@
 
 LINK:- https://www.kaggle.com/code/jyotimanojmandal/ott-analysis-spotify-dataset
 
+I am excited to share my ongoing project on "Data Analysis and Visualizations on Spotify Dataset (OTT Analysis)." 🎵
 
-About the project: This project is a part of course Data Analysis with Python: Zero to Pandas provided by Jovian. Jovian is an online platform for data science and machine learning. It is designed to provide the best hands-on learning experience.
+In this project, I am exploring the vast Spotify dataset, which contains valuable information about tracks, artists, popularity, duration, and more. By leveraging the power of data analysis and visualization, I aim to extract meaningful insights and provide valuable recommendations for future decision-making. 📊
 
-About Dataset: This dataset is retrieved from kaggle. Kaggle is a online platform especially for data science and machine learning which provide resources and tools for achieving higher in the domain. The link for this url is Spotify data and you can visit Kaggle datasets for various interesting datasets around the world.
+The dataset was obtained from Kaggle, a renowned online platform for data analysis, data science, and machine learning. Kaggle provides a wealth of resources and tools to empower data enthusiasts like me to achieve excellence in the field. If you're interested, I encourage you to explore the fascinating datasets available on the Kaggle platform. 🌍
 
-Our dataset contains informations like tracks, artists, popularity, duration and many more.
+Through this project, my objective is twofold. Firstly, I aim to uncover hidden patterns and trends within the Spotify dataset, enabling me to extract valuable information that goes beyond the surface-level data. Secondly, I strive to provide insightful visualizations that effectively communicate the findings, enabling better decision-making for the company. 📈
 
-Objective of the analysis
-To extract more and more information from the data.
-To provide better insights. So that it will help in future decisions that can be taken by the company.
+Utilizing my skills in Python programming, data analysis, exploratory data analysis (EDA), and data cleaning, I am diving deep into the Spotify dataset. Additionally, I am proficient in utilizing popular data visualization libraries like Matplotlib and Seaborn to create compelling visual representations of the insights I uncover. 📊
 
-corr_df = df_tracks.drop(["key", "mode", "explicit"], axis = 1).corr(method = "pearson", numeric_only = True)
-plt.figure(figsize = (10,6))
-ax = sns.heatmap(corr_df, annot = True, fmt = ".1g", linecolor = 'k', linewidths = '5', cmap = 'Reds')
-plt.title("Correlation Between Variables")
-sample_df = df_tracks.sample(int(0.004*len(df_tracks)))
-print(len(sample_df))
+By leveraging this analysis, I am committed to providing better insights for the company, empowering them to make informed decisions. I believe that data-driven strategies are instrumental in driving success and growth in the ever-evolving music streaming industry. 🎧
 
-plt.figure(figsize = (10,6))
-sns.regplot(data = sample_df, y = "loudness", x = "energy", color = "c")
-plt.title("Loudness vs Energy Correlation")
+If you're interested in the fascinating realm of music data analysis and visualization, I invite you to connect with me to learn more about this project and explore potential collaborations. Let's harmonize our expertise and uncover the melodies hidden within the data! 🎵
 
-plt.figure(figsize = (10,8))
-sns.regplot(data = sample_df, y = "popularity", x = "acousticness", color = "red")
-plt.title("Popularity vs Acoustiness Correlation")
-
-df_tracks['dates'] = df_tracks.index.get_level_values('release_date')
-df_tracks.dates = pd.to_datetime(df_tracks.dates)
-years = df_tracks.dates.dt.year
-sns.displot(years, discrete = True, aspect = 2, height = 5, kind = "hist")
-plt.title("Number of Songs per Year")
+#DataAnalysis #DataVisualization #SpotifyDataset #MusicIndustry #Kaggle
 
 
 ![__results___27_1](https://github.com/HOSHANGI/OTT-Analysis-on-Spotify-Dataset/assets/118753140/b2373b12-4fc4-4d62-a494-d285a709a508)
